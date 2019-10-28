@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>addPerfume</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-grid class="ion-padding-top">
+    <ion-text> Please fill up the information</ion-text>
+    <div [formGroup]="addperfumeForm">
+
+        
+
+          <ion-item>
+              <ion-label position="floating">Name</ion-label>
+              <ion-input formControlName="name"></ion-input>
+            </ion-item>
+            
+
+
+
+          <ion-item>
+
+        <ion-label position="floating">Image url</ion-label>
+        <ion-input formControlName="image"></ion-input>
+      </ion-item>
+            
+
+      
+      <ion-item>
+      <ion-label position="floating">description</ion-label>
+      <ion-input formControlName="descript"></ion-input>
+      </ion-item>
+
+      
+
+     
+
+       
+
+      <ion-grid class="ion-padding-top">
+        <ion-row class="ion-justify-content-center">
+
+          <ion-button shape="round" [disabled]="!addperfumeForm.valid" (click)="add()"  >Save</ion-button>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+  </ion-grid>
+</ion-content>

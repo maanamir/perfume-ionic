@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="perfumelist"></ion-back-button>
+    
+        </ion-buttons>
+        <ion-button (click)="deletePerfume()" slot="end"  color="danger" defaultHref="perfumelist">
+          <ion-icon name="trash"  ></ion-icon>
+     
+  
+      </ion-button>
+    <ion-title>perfume</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img [src]="singlePerfume?.image">
+        <ion-card-header>
+          <ion-card-title>{{singlePerfume?.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Description:
+          {{singlePerfume?.descript}}
+          
+    
+        </ion-card-content>
+        
+    
+    
+    
+      </ion-card>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="home"></ion-back-button>
+    
+        </ion-buttons>
+    <ion-title>perfumelist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let item of perfumes">
+        <ion-item (click)="changeUrl(item)">
+
+              <ion-thumbnail slot="start">
+                  <img [src]="item.image">
+                </ion-thumbnail>
+            <ion-label><h2>{{ item?.name }} 
+            </h2></ion-label>
+            
+        </ion-item>
+      </ion-card>
+</ion-content>
