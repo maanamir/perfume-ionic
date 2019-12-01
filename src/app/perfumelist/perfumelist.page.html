@@ -1,16 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button defaultHref="home"></ion-back-button>
-    
-        </ion-buttons>
-    <ion-title>perfumelist</ion-title>
+  <ion-toolbar color="primary" >
+      
+        <ion-button (click)="addTask()" slot="end"  color="dark" >
+          <ion-icon name="add"  ></ion-icon>
+        </ion-button>
+    <ion-title>ToDoList</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let item of perfumes">
-        <ion-item (click)="changeUrl(item)">
+    <ion-card *ngFor="let item of perfumes" color="light">
+      <app-perfumelistitem [item]="item"></app-perfumelistitem>
+        <!-- <ion-item (click)="changeUrl(item)">
 
               <ion-thumbnail slot="start">
                   <img [src]="item.image">
@@ -18,6 +19,6 @@
             <ion-label><h2>{{ item?.name }} 
             </h2></ion-label>
             
-        </ion-item>
+        </ion-item> -->
       </ion-card>
 </ion-content>

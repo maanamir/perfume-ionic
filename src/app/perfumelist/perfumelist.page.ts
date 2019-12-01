@@ -16,6 +16,7 @@ export class PerfumelistPage implements OnInit {
     ) { }
 
   perfumes = [];
+
     ngOnInit() {
     }
     changeUrl(clickedPerfume) {
@@ -27,8 +28,15 @@ export class PerfumelistPage implements OnInit {
     
   }
 
+  addTask()
+  {
+    this.router.navigateByUrl('/add-perfume');
+  }
+
   ionViewDidEnter() {
     console.log('view Enter');
     this.perfumes = this.perfumesListService.returnPerfumesList();
+    
+
   }
 }

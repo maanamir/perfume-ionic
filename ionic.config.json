@@ -1,5 +1,7 @@
 {
   "name": "perfume-ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

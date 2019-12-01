@@ -9,25 +9,83 @@
      
   
       </ion-button>
-    <ion-title>perfume</ion-title>
+    <ion-title>Task Information</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card>
-        <img [src]="singlePerfume?.image">
-        <ion-card-header>
-          <ion-card-title>{{singlePerfume?.name}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          Description:
-          {{singlePerfume?.descript}}
+   
+
+
+
+      
+      
           
+            
+    <br/>
+    <br/>
     
-        </ion-card-content>
         
-    
-    
-    
-      </ion-card>
+                
+                  <!-- // Task Name -->
+                  <ion-item>
+                      <ion-label >Name</ion-label>
+                      <ion-text >{{singlePerfume?.name}}</ion-text>
+                    </ion-item>
+                    
+                   
+        
+                
+                    
+        
+        
+              <ion-item>
+                  <ion-label >Status</ion-label>
+                  <ion-text >{{singlePerfume?.status}}</ion-text>
+                </ion-item>
+        
+        
+              <!-- //start date -->
+              <ion-item>
+                <ion-label>Start Date</ion-label>
+                <ion-text >{{newSDate |  date:'dd/MM/yyyy'}}</ion-text>
+              </ion-item>
+            
+        
+              <!-- //Finish date -->
+              <ion-item>
+                <ion-label>Finish Date</ion-label>
+                <ion-text >{{newFDate |  date:'dd/MM/yyyy'}}</ion-text>
+              </ion-item>
+                  
+                   <!-- // description -->
+
+                      
+                      
+                      <ion-card>
+                          <ion-card-header> Description:</ion-card-header>
+                        
+                        
+                        <ion-card-content>
+                           
+                            {{singlePerfume?.descript}}
+                      </ion-card-content>
+                      </ion-card>
+                  
+                  
+                  
+              
+        
+               
+        
+              
+                <ion-row class="ion-justify-content-center">
+        
+                  <ion-button shape="round"  (click)="update()"  >Update Task</ion-button>
+                </ion-row>
+              
+        
+           
+          
+     
 </ion-content>

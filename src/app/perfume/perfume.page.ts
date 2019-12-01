@@ -18,6 +18,8 @@ export class PerfumePage implements OnInit {
     private perfumesListService: PerfumesListService
     ) {}
   perfumes = [];
+  newSDate:any;
+  newFDate:any;
 singlePerfume;
   ngOnInit() {
     this.perfumes=this.perfumesListService.getAllPerfumes();
@@ -26,8 +28,14 @@ singlePerfume;
 
       this.singlePerfume = this.perfumes.find(obj => {
         return obj.id.includes(val);
+
       });
     });
+    
+    let dateSString = this.singlePerfume.sDate;
+    this.newSDate = new Date(dateSString);
+    let dateFString = this.singlePerfume.fDate;
+    this.newFDate = new Date(dateFString);
   }
 
 

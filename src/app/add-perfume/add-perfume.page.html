@@ -1,6 +1,10 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>addPerfume</ion-title>
+  <ion-toolbar color="primary">
+      <ion-button slot="start" (click)="deletePerfume()">
+          <ion-icon name="backspace"></ion-icon>
+          
+        </ion-button>
+    <ion-title>New Task</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,31 +16,62 @@
     <div [formGroup]="addperfumeForm">
 
         
-
+          <!-- // Task Name -->
           <ion-item>
               <ion-label position="floating">Name</ion-label>
               <ion-input formControlName="name"></ion-input>
             </ion-item>
             
+            <!-- // description -->
+            <ion-item>
+              <ion-label position="floating">Description</ion-label>
+              <ion-input formControlName="descript"></ion-input>
+              </ion-item>
 
-
-
-          <ion-item>
-
-        <ion-label position="floating">Image url</ion-label>
-        <ion-input formControlName="image"></ion-input>
-      </ion-item>
+        
             
 
-      
+      <!-- //Task Status -->
+      <!-- <ion-item>
+      <ion-label position="floating">Status</ion-label>
+      <ion-input formControlName="status"></ion-input>
+      </ion-item> -->
+
       <ion-item>
-      <ion-label position="floating">description</ion-label>
-      <ion-input formControlName="descript"></ion-input>
+          <ion-label position="floating">Status</ion-label>
+          <ion-select formControlName="status" value="not started" >
+            <ion-select-option value="not started">not started</ion-select-option> 
+            <ion-select-option value="On hold">On hold</ion-select-option> 
+            <ion-select-option value="in progress">in progress</ion-select-option> 
+            <ion-select-option value="done">done</ion-select-option> 
+          </ion-select>
+        </ion-item>
+
+
+      <!-- //start date -->
+      <ion-item>
+        <ion-label>Start Date</ion-label>
+        <ion-datetime formControlName="sDate" displayFormat="D MMM YYYY  " [value]="today"  [min]="today" [max]="2030"></ion-datetime>
       </ion-item>
+      <!-- //start time
+      <ion-item>
+        <ion-label>Start Time</ion-label>
+        <ion-datetime formControlName="sTime" displayFormat="h:mm A" [value]="today" [min]="today" ></ion-datetime>
+      </ion-item> -->
 
-      
+      <!-- //Finish date -->
+      <ion-item>
+        <ion-label>Finish Date</ion-label>
+        <ion-datetime formControlName="fDate" displayFormat="D MMM YYYY  " [value]="today"  [min]="today" [max]="2030"></ion-datetime>
+      </ion-item>
+      <!-- //Finish time
+      <ion-item>
+        <ion-label>Finish Time</ion-label>
+        <ion-datetime formControlName="fTime" displayFormat="h:mm A" [value]="today" [min]="today" ></ion-datetime>
+      </ion-item> -->
 
-     
+          
+          
 
        
 
